@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-// Função para validar o genero informado pelo usuário
 char validagenero() {
     char genero;
     do {
@@ -10,8 +9,6 @@ char validagenero() {
     } while (genero != 'M' && genero != 'F');
     return genero;
 }
-
-// Função para validar o salário informado pelo usuário
 float validaSalario() {
     float salario;
     do {
@@ -20,8 +17,6 @@ float validaSalario() {
     } while (salario <= 1.0);
     return salario;
 }
-
-// Função para classificar o salário em relação ao salário mínimo
 char* classificaSalario(float salario) {
     if (salario > 1400.0) {
         return "Acima";
@@ -31,8 +26,6 @@ char* classificaSalario(float salario) {
         return "Igual";
     }
 }
-
-// Função para mostrar os dados do assalariado
 void mostraClassifica(char genero, float salario, char* classificacao) {
     printf("Salario: R$ %.2f\n", salario);
     printf("Classificacao em relacao ao salario minimo: %s\n", classificacao);
